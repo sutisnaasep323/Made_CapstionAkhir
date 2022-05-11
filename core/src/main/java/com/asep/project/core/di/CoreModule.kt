@@ -1,6 +1,7 @@
 package com.asep.project.core.di
 
 import androidx.room.Room
+import com.asep.project.core.BuildConfig
 import com.asep.project.core.data.MovieAppRepository
 import com.asep.project.core.data.source.local.LocalDataSource
 import com.asep.project.core.data.source.local.room.MovieDatabase

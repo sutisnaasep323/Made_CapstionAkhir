@@ -11,10 +11,6 @@ import org.koin.android.viewmodel.ext.android.viewModel
 
 class DetailActivity : AppCompatActivity() {
 
-    companion object {
-        const val EXTRA_MOVIE = "extraMovie"
-    }
-
     private lateinit var binding: ActivityDetailBinding
     private val viewModel: DetailViewModel by viewModel()
 
@@ -71,5 +67,9 @@ class DetailActivity : AppCompatActivity() {
                 )
             )
         }
+    }
+
+    companion object {
+        const val EXTRA_MOVIE = "extraMovie"
     }
 }

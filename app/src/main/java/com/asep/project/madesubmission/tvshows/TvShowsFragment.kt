@@ -141,14 +141,14 @@ class TvShowsFragment : Fragment(), View.OnClickListener {
     }
 
     private fun setSearchList() {
-        searchViewModel.tvShowResult.observe(viewLifecycleOwner, { tvShows ->
+        searchViewModel.tvShowResult.observe(viewLifecycleOwner) { tvShows ->
             if (tvShows.isNullOrEmpty()) {
                 setDataState(DataState.ERROR)
             } else {
                 setDataState(DataState.SUCCESS)
             }
             tvShowsAdapter.setData(tvShows)
-        })
+        }
         searchView.setOnSearchViewListener(object : MaterialSearchView.SearchViewListener {
             override fun onSearchViewShown() {
                 setDataState(DataState.SUCCESS)

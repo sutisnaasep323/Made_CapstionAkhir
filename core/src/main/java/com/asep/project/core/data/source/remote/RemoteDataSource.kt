@@ -1,5 +1,6 @@
 package com.asep.project.core.data.source.remote
 
+import com.asep.project.core.BuildConfig
 import com.asep.project.core.data.source.remote.network.ApiResponse
 import com.asep.project.core.data.source.remote.network.ApiService
 import com.asep.project.core.data.source.remote.response.MovieResponse
@@ -11,7 +12,7 @@ import kotlinx.coroutines.flow.flowOn
 
 class RemoteDataSource(private val apiService: ApiService) {
 
-    private val apiKey = "05f676ba55cc7e3a11bfb0bd6932bafc"
+    private val apiKey = BuildConfig.API_KEY
 
     suspend fun getMovies(): Flow<ApiResponse<List<MovieResponse>>> {
         return flow {

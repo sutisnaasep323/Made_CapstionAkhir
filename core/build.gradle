@@ -11,13 +11,16 @@ android {
     buildToolsVersion "30.0.3"
 
     defaultConfig {
-        minSdkVersion 24
+        minSdk 21
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
+
+        buildConfigField "String", "BASE_URL", "\"https://api.themoviedb.org/3/discover/\""
+        buildConfigField "String", "API_KEY", "\"05f676ba55cc7e3a11bfb0bd6932bafc\""
     }
 
     buildTypes {
